@@ -282,7 +282,7 @@
 
 | Сделано | Оценка | Почему |
 |---|---|---|
-| robots.txt явно разрешает GPTBot, PerplexityBot, ClaudeBot, Google-Extended, Applebot-Extended, YandexBot | **Полезно, но неполно** | Для цитирования важнее OAI-SearchBot (ChatGPT search), YandexAdditional (Алиса), Bingbot, Perplexity-User. GPTBot и Google-Extended касаются обучения моделей, а не попадания в ответы. Проверить и дополнить (неделя 1) |
+| robots.txt явно разрешает GPTBot, PerplexityBot, ClaudeBot, Google-Extended, Applebot-Extended, YandexBot | **Полезно, доступ в порядке** | Проверено 21.10.2026: `User-agent: * / Allow: /` пускает всех остальных, включая OAI-SearchBot, YandexAdditional, Bingbot и Perplexity-User. **Исправить строку Sitemap:** в ней домен записан кириллицей, и при открытии файл показывается кракозябрами («РєР°Р»Р°РµРІ.СЂС„»). Нужно `Sitemap: https://xn--80aaglwh.xn--p1ai/sitemap-index.xml` и UTF-8 без BOM |
 | /llms.txt | **Бесполезно, но безвредно** | По логам боты его почти не запрашивают, Google не поддерживает, связи с цитированием не найдено. Не тратить на него время |
 | lastmod во всём sitemap | **Полезно**, если lastmod меняется только при реальной правке | Помогает переобходу. Если lastmod у всех страниц одинаковый или меняется сам, поисковики перестают ему доверять |
 | Person-схема на /about/ | **Полезно** | Основа сущности автора. Усилить `@id`, `sameAs` и ссылками из Article |
